@@ -79,7 +79,7 @@ namespace CrossCutting
 
         public static Guid GetValueGuid(this IDataReader reader, int ordinal)
         {
-            Guid value = default(Guid);
+            Guid value = Guid.NewGuid();
 
             if (!reader.IsDBNull(ordinal))
             {
@@ -153,7 +153,7 @@ namespace CrossCutting
 
         public static Guid GetValueGuid2(this IDataReader reader, int ordinal)
         {
-            Guid value = default(Guid);
+            Guid value = Guid.NewGuid();
 
             if (!reader.IsDBNull(ordinal))
             {
